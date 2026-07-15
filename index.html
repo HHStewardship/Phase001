@@ -55,20 +55,16 @@
   /* ---------- Header ---------- */
   header.hero{
     background:
-      linear-gradient(180deg, rgba(18,33,27,0.92), rgba(22,40,31,0.88)),
-      repeating-linear-gradient(135deg, rgba(255,255,255,0.02) 0 2px, transparent 2px 40px);
+      linear-gradient(180deg, rgba(15,27,21,0.86), rgba(18,33,27,0.93) 65%, var(--forest-950) 96%),
+      repeating-linear-gradient(135deg, rgba(255,255,255,0.02) 0 2px, transparent 2px 40px),
+      url('assets/header-bg.jpg');
+    background-size: cover, cover, cover;
+    background-position: center, center, center 65%;
     color:var(--cream-100);
     padding:64px 0 56px;
     position:relative;
     overflow:hidden;
     border-bottom:1px solid rgba(203,168,108,0.35);
-  }
-  header.hero::before{
-    content:"";
-    position:absolute; inset:0;
-    background-image: linear-gradient(transparent, var(--forest-950) 92%),
-      polygon-mountains;
-    pointer-events:none;
   }
   .mountain-svg{position:absolute; bottom:-2px; left:0; width:100%; height:auto; opacity:0.5;}
 
@@ -426,7 +422,7 @@ const PHASES = [
     intro: "Close out discovery and stand up everything the build depends on.",
     items: [
       "Review and approve this plan together; confirm the site scope in writing.",
-      "<strong>Domain selection and purchase.</strong> Since the preferred email address depends on the domain being available, 3–5 available alternatives will be presented (e.g., homeharmonystewardship.com, harmonyhomenga.com) so one can be locked in early branding, email, and legal docs all reference it.",
+      "<strong>Domain selection and purchase.</strong> Since the preferred email address depends on the domain being available, 3–5 available alternatives will be presented (e.g., homeharmonystewardship.com, harmonyhomenga.com) so one can be locked in early — branding, email, and legal docs all reference it.",
       "Hosting, DNS, SSL, and business email setup on the chosen domain.",
       "Platform setup and password-protected staging environment.",
       "Client input collection: property/area photos or approval to use licensed stock, headshot, service-area town list, and any existing pricing/contract documents referenced during discovery.",
@@ -457,13 +453,13 @@ const PHASES = [
     milestone: "All pages built on staging with final SATCORP-written content",
     intro: "All pages get built out on staging with final content, professionally written from the discovery questionnaire answers.",
     items: [
-      "<strong>Home</strong>  hero with primary CTA “Book Your Private Consultation,” trust-building overview, membership teaser, service-area map.",
-      "<strong>About</strong>  Katie's story and mission, adapted from her questionnaire answers.",
-      "<strong>Services</strong>  grouped by category: Home Watch & Inspections, Vendor Coordination, Home Preparation & Restocking, Vacation Rental/Airbnb Support, Concierge & Lifestyle, Seasonal Services.",
+      "<strong>Home</strong> hero with primary CTA “Book Your Private Consultation,” trust-building overview, membership teaser, service-area map.",
+      "<strong>About</strong> Katie's story and mission, adapted from her questionnaire answers.",
+      "<strong>Services</strong> grouped by category: Home Watch & Inspections, Vendor Coordination, Home Preparation & Restocking, Vacation Rental/Airbnb Support, Concierge & Lifestyle, Seasonal Services.",
       "<strong>Memberships & Pricing</strong> three-tier comparison with Founding Member callout, plus à la carte and one-time services.",
-      "<strong>FAQ</strong>  onboarding, service areas, scheduling, billing basics.",
-      "<strong>Blog/Resources</strong>  blog framework plus 2–3 starter posts (second-home care, seasonal prep) for launch-day SEO.",
-      "<strong>Contact / Book a Consultation</strong>  consultation request form feeding a scheduling flow, with email notification to Katie and auto-confirmation to the prospect.",
+      "<strong>FAQ</strong> onboarding, service areas, scheduling, billing basics.",
+      "<strong>Blog/Resources</strong> blog framework plus 2–3 starter posts (second-home care, seasonal prep) for launch-day SEO.",
+      "<strong>Contact / Book a Consultation</strong> consultation request form feeding a scheduling flow, with email notification to Katie and auto-confirmation to the prospect.",
       "A focused set of integrations to start: Google Business Profile + Maps embed, social links, newsletter signup capture. CRM/QuickBooks/SMS are part of the future-phase roadmap."
     ],
     exit: "Complete staging site with real content, reviewed at the Sep 1 check-in."
