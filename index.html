@@ -55,18 +55,21 @@
   /* ---------- Header ---------- */
   header.hero{
     background:
-      linear-gradient(180deg, rgba(15,27,21,0.86), rgba(18,33,27,0.93) 65%, var(--forest-950) 96%),
-      repeating-linear-gradient(135deg, rgba(255,255,255,0.02) 0 2px, transparent 2px 40px),
+      linear-gradient(180deg, rgba(12,22,17,0.16), rgba(15,27,21,0.30) 55%, var(--forest-950) 96%),
       url('assets/header-bg.jpg');
-    background-size: cover, cover, cover;
-    background-position: center, center, center 65%;
+    background-size: cover, cover;
+    background-position: center, center 65%;
     color:var(--cream-100);
     padding:64px 0 56px;
     position:relative;
     overflow:hidden;
     border-bottom:1px solid rgba(203,168,108,0.35);
   }
-  .mountain-svg{position:absolute; bottom:-2px; left:0; width:100%; height:auto; opacity:0.5;}
+  header.hero .title,
+  header.hero .subtitle,
+  header.hero .eyebrow{
+    text-shadow: 0 2px 14px rgba(0,0,0,0.55);
+  }
 
   .eyebrow{
     display:inline-flex;align-items:center;gap:10px;
@@ -84,6 +87,7 @@
     margin:0 0 10px;
     letter-spacing:0.01em;
     color:var(--cream-050);
+    text-shadow: 0 2px 18px rgba(0,0,0,0.45);
   }
   .subtitle{
     font-size:1.05rem;
@@ -91,6 +95,7 @@
     max-width:640px;
     margin:0 0 34px;
     font-weight:300;
+    text-shadow: 0 1px 12px rgba(0,0,0,0.4);
   }
 
   .snapshot-grid{
@@ -100,11 +105,12 @@
     position:relative; z-index:1;
   }
   .snap-card{
-    background:rgba(250,246,238,0.06);
-    border:1px solid rgba(223,196,142,0.25);
+    background:rgba(15,27,21,0.42);
+    border:1px solid rgba(223,196,142,0.3);
     border-radius:var(--radius-md);
     padding:16px 18px;
     backdrop-filter:blur(6px);
+    box-shadow: 0 4px 18px rgba(0,0,0,0.25);
   }
   .snap-card .label{
     font-size:11px; text-transform:uppercase; letter-spacing:0.14em;
@@ -320,10 +326,6 @@
 <body>
 
 <header class="hero">
-  <svg class="mountain-svg" viewBox="0 0 1200 160" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-    <polygon points="0,160 0,110 180,40 320,95 480,20 650,100 800,55 980,120 1120,60 1200,95 1200,160" fill="rgba(203,168,108,0.10)"/>
-    <polygon points="0,160 0,135 150,90 300,130 500,75 700,135 900,90 1050,140 1200,110 1200,160" fill="rgba(18,33,27,0.55)"/>
-  </svg>
   <div class="wrap">
     <div class="eyebrow"><span class="dot"></span> SATCORP &nbsp;·&nbsp; Project Overview</div>
     <h1 class="title">Home Harmony<br>Phased Development Plan</h1>
@@ -396,6 +398,7 @@
     <div class="assumptions-box">
       <h2>Good to Know</h2>
       <ul>
+        <li>This is a template-based build with full brand customization, not fully custom development from scratch this keeps the timeline efficient without compromising the finished look.</li>
         <li>A feedback turnaround of about 3 business days per review point keeps the project on track; the October 1 launch date can shift if reviews take longer.</li>
         <li>Setting up online payments requires an LLC/EIN and a business bank account getting these in place early in Phase 0 helps keep the whole timeline on schedule.</li>
         <li>Domain choice may affect the preferred email address and any printed materials, so it's worth resolving before brand sign-off.</li>
@@ -422,7 +425,7 @@ const PHASES = [
     intro: "Close out discovery and stand up everything the build depends on.",
     items: [
       "Review and approve this plan together; confirm the site scope in writing.",
-      "<strong>Domain selection and purchase.</strong> Since the preferred email address depends on the domain being available, 3–5 available alternatives will be presented (e.g., homeharmonystewardship.com, harmonyhomenga.com) so one can be locked in early — branding, email, and legal docs all reference it.",
+      "<strong>Domain selection and purchase.</strong> Since the preferred email address depends on the domain being available, 3–5 available alternatives will be presented (e.g., homeharmonystewardship.com, harmonyhomenga.com) so one can be locked in early branding, email, and legal docs all reference it.",
       "Hosting, DNS, SSL, and business email setup on the chosen domain.",
       "Platform setup and password-protected staging environment.",
       "Client input collection: property/area photos or approval to use licensed stock, headshot, service-area town list, and any existing pricing/contract documents referenced during discovery.",
